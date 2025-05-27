@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Git y GitHub</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>Guía de Git y GitHub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="integracion.html">Integración</a></li>
+        <li><a href="comandos.html">Comandos</a></li>
+        <li><a href="cv.html">Mi CV</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="card-content">
+        <h2>¿Qué es Git?</h2>
+        <p>
+          Git es un sistema de control de versiones distribuido, gratuito y de código abierto. Fue diseñado para manejar desde pequeños a muy grandes proyectos con rapidez y eficiencia.
+        </p>
+      </div>
+      <div class="card-img">
+        <img src="img/logoGit.png" alt="Logo de Git" />
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-content">
+        <h2>¿Qué es GitHub?</h2>
+        <p>
+          GitHub es una plataforma en línea que aloja repositorios Git y facilita la colaboración entre desarrolladores. Ofrece herramientas como issues, pull requests y GitHub Actions.
+        </p>
+      </div>
+      <div class="card-img">
+        <img src="img/logoGithub.jpg" alt="Logo de GitHub" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Angel - Guía de Git y GitHub</p>
+
+    <div class="accesibilidad">
+      <div class="filtro-daltonismo">
+        <label for="select-daltonismo">Filtro daltonismo:</label>
+        <select id="select-daltonismo" aria-label="Filtro para tipos de daltonismo">
+          <option value="ninguno">Ninguno</option>
+          <option value="protanopia">Protanopía</option>
+          <option value="deuteranopia">Deuteranopía</option>
+          <option value="tritanopia">Tritanopía</option>
+        </select>
+      </div>
+
+      <div class="botones-accesibilidad">
+        <button id="btn-aumentar">A+</button>
+        <button id="btn-disminuir">A-</button>
+        <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
+        <button id="btn-alto-contraste">🌓 Alto contraste</button>
+        <button id="btn-sin-imagenes">🚫 Imágenes</button>
+        <button id="btn-sin-links">🚫 Links</button>
+        <button id="btn-lectura">🔊 Leer</button>
+        <button id="btn-reiniciar">♻️ Reiniciar</button>
+      </div>
+      
+    </div>
+  </footer>
+
+  <script src="js/accesibilidad.js"></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+/* ----------------------- GENERALES ----------------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #222;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+/* ----------------------- HEADER ----------------------- */
+header {
+  background-color: #004d40;
+  color: #fff;
+  padding: 1em;
+  margin: 0 20em;
+  border-radius: 0 0 5em 5em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ----------------------- NAVEGACIÓN ----------------------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 1em 0 0;
+  gap: 1em;
+}
+
+nav a {
+  color: #a7ffeb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a[aria-current="page"] {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ----------------------- CONTENIDO PRINCIPAL ----------------------- */
+main {
+  flex: 1 0 auto;
+  max-width: 1000px;
+  margin: 2em auto;
+  width: 100%;
+}
+
+/* ----------------------- TARJETAS ----------------------- */
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-img img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ----------------------- FOOTER ----------------------- */
+footer {
+  background-color: #004d40;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-radius: 5em 5em 0 0;
+  margin: 0 20em;
+}
+
+footer p {
+  margin: 0.5em 0;
+}
+
+/* ----------------------- ACCESIBILIDAD ----------------------- */
+.accesibilidad {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.filtro-daltonismo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filtro-daltonismo label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.filtro-daltonismo select {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filtro-daltonismo select:hover {
+  background-color: #004d40;
+}
+
+.botones-accesibilidad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+button {
+  cursor: pointer;
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, button:focus {
+  background-color: #004d40;
+  outline: none;
+}
+
+button#btn-lectura.activo {
+  background-color: #00796b; /* color cuando audio NO está activo */
+  color: white;
+}
+
+button#btn-lectura {
+  background-color: #004d40; /* color cuando audio está activo */
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+/* ----------------------- IMÁGENES ----------------------- */
+.img-logo-ods,
+.img-pobreza {
+  display: block;
+  height: auto;
+  margin: 1em auto;
+}
+
+.img-logo-ods {
+  width: 20rem;
+}
+
+.img-pobreza {
+  width: 35rem;
+}
+
+.img-foto-cv {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00796b;
+  flex-shrink: 0;
+}
+
+/* ----------------------- MODOS DE ACCESIBILIDAD ----------------------- */
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #000;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #263238;
+}
+
+body.dark-mode nav a {
+  color: #80cbc4;
+}
+
+body.dark-mode nav a[aria-current="page"] {
+  color: #a7ffeb;
+}
+
+/* Alto contraste */
+body.high-contrast {
+  background-color: #000 !important;
+  color: #ff0 !important;
+}
+
+body.high-contrast label,
+body.high-contrast h2,
+body.high-contrast p,
+body.high-contrast h3,
+body.high-contrast li {
+  color: #ff0 !important;
+}
+
+body.high-contrast a {
+  color: #0ff !important;
+  font-weight: bolder;
+}
+
+body.high-contrast .card {
+  background-color: #000 !important;
+}
+
+/* Daltonismo */
+body.daltonismo-protanopia {
+  filter: grayscale(100%) sepia(20%) hue-rotate(340deg) saturate(150%);
+}
+
+body.daltonismo-deuteranopia {
+  filter: grayscale(100%) sepia(15%) hue-rotate(130deg) saturate(130%);
+}
+
+body.daltonismo-tritanopia {
+  filter: grayscale(100%) sepia(30%) hue-rotate(220deg) saturate(140%);
+}
+
+/* Sin imágenes */
+body.no-images img {
+  display: none !important;
+}
+
+/* Sin links */
+body.no-links a {
+  pointer-events: none;
+  color: red !important;
+  text-decoration: underline !important;
+}
+
+/* ----------------------- FORMULARIO CONTACTO ----------------------- */
+.contact-card {
+  max-width: 600px;
+  margin: 3em auto;
+  padding: 2em 2.5em;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+/* Cada fila ocupa el 48% para dos columnas en escritorio */
+.contact-card .form-row {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card .form-row.full-width {
+  flex-basis: 100%;
+}
+
+.contact-card label {
+  font-weight: 600;
+  color: #004d40;
+  margin-bottom: 0.4rem;
+}
+
+.contact-card input[type="text"],
+.contact-card input[type="email"],
+.contact-card textarea {
+  padding: 0.8em 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact-card input[type="text"]:focus,
+.contact-card input[type="email"]:focus,
+.contact-card textarea:focus {
+  border-color: #00796b;
+  outline: none;
+  box-shadow: 0 0 5px #00796b;
+}
+
+.contact-card button {
+  padding: 0.7em 1.6em;
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.contact-card button:hover,
+.contact-card button:focus {
+  background-color: #004d40;
+  outline: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  header, footer {
+    margin: 0 1em;
+    border-radius: 0;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card-img img {
+    max-width: 100%;
+  }
+  .contact-card {
+    margin: 1.5em 1em;
+    padding: 1.5em;
+  }
+  .contact-card form {
+    gap: 1rem 0;
+  }
+  .contact-card .form-row {
+    flex-basis: 100%;
+  }
+  .contact-card button {
+    width: 100%;
+    align-self: center;
+  }
+  nav ul {
+    flex-wrap: wrap;
+  }
+}

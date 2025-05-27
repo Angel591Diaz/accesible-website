@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>Guía de Git y GitHub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="integracion.html">Integración</a></li>
+        <li><a href="comandos.html">Comandos</a></li>
+        <li><a href="cv.html">Mi CV</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <section class="card contact-card">
+  <form id="form-contacto" action="mailto:adiaz57@ucol.mx" method="post" enctype="text/plain" novalidate>
+    <div class="form-row">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required />
+    </div>
+
+    <div class="form-row">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-row full-width">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    </div>
+
+    <div class="form-row">
+      <label for="captcha">Captcha:</label>
+      <input type="text" id="captcha" name="captcha" required />
+    </div>
+
+    <div class="form-row full-width">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+
+
+  <footer>
+    <p>© 2025 Angel - Guía de Git y GitHub</p>
+
+    <div class="accesibilidad">
+      <div class="filtro-daltonismo">
+        <label for="select-daltonismo">Filtro daltonismo:</label>
+        <select id="select-daltonismo" aria-label="Filtro para tipos de daltonismo">
+          <option value="ninguno">Ninguno</option>
+          <option value="protanopia">Protanopía</option>
+          <option value="deuteranopia">Deuteranopía</option>
+          <option value="tritanopia">Tritanopía</option>
+        </select>
+      </div>
+
+      <div class="botones-accesibilidad">
+        <button id="btn-aumentar">A+</button>
+        <button id="btn-disminuir">A-</button>
+        <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
+        <button id="btn-alto-contraste">🌓 Alto contraste</button>
+        <button id="btn-sin-imagenes">🚫 Imágenes</button>
+        <button id="btn-sin-links">🚫 Links</button>
+        <button id="btn-lectura">🔊 Leer</button>
+        <button id="btn-reiniciar">♻️ Reiniciar</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/accesibilidad.js"></script>
+</body>
+</html>
