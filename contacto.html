@@ -1,149 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto</title>
-  <link rel="stylesheet" href="css/estilos.css" />
-</head>
-<body>
-  <header>
-    <h1>Guía de Git y GitHub</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="integracion.html">Integración</a></li>
-        <li><a href="comandos.html">Comandos</a></li>
-        <li><a href="cv.html">Mi CV</a></li>
-        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
 
-  <main>
-  <section class="card contact-card">
-  <form id="form-contacto" action="https://formsubmit.co/adiaz57@ucol.mx" method="POST">
-  <!-- Oculta la página de confirmación por defecto de FormSubmit -->
-  <input type="hidden" name="_captcha" value="false">
-  
-  <!-- Redirigir al usuario después de enviar el formulario -->
-  <input type="hidden" name="_next" value="https://angel591diaz.github.io/accesible-website/gracias.html">
-  
-  <div class="form-row">
-    <label for="nombre">Nombre completo:</label>
-    <input type="text" id="nombre" name="nombre" required />
-  </div>
+  <body>
+    <header>
+      <h1>Guía de Git y GitHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="integracion.html">Integración</a></li>
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="cv.html">Mi CV</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="form-row">
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required />
-  </div>
+    <main>
+      <section class="card contact-card">
+        <form
+          id="form-contacto"
+          action="https://formsubmit.co/adiaz57@ucol.mx"
+          method="POST"
+        >
+          <input type="hidden" name="_captcha" value="false" />
 
-  <div class="form-row full-width">
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-  </div>
+          <input
+            type="hidden"
+            name="_next"
+            value="https://angel591diaz.github.io/accesible-website/gracias.html"
+          />
 
-  <div class="form-row">
-  <label for="captcha-input">Escribe el texto: <strong id="captcha-text"></strong></label>
-  <input type="text" id="captcha-input" required />
-</div>
+          <div class="form-row">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
 
+          <div class="form-row">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-  <div class="form-row full-width">
-    <button type="submit">Enviar</button>
-  </div>
-</form>
+          <div class="form-row full-width">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
 
-</section>
+          <div class="form-row">
+            <label for="captcha-input"
+              >Escribe el texto: <strong id="captcha-text"></strong
+            ></label>
+            <input type="text" id="captcha-input" required />
+          </div>
 
-</main>
+          <div class="form-row full-width">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </main>
 
+    <footer>
+      <p>© 2025 Angel - Guía de Git y GitHub</p>
 
+      <div class="accesibilidad">
+        <div class="filtro-daltonismo">
+          <label for="select-daltonismo">Filtro daltonismo:</label>
+          <select
+            id="select-daltonismo"
+            aria-label="Filtro para tipos de daltonismo"
+          >
+            <option value="ninguno">Ninguno</option>
+            <option value="protanopia">Protanopía</option>
+            <option value="deuteranopia">Deuteranopía</option>
+            <option value="tritanopia">Tritanopía</option>
+          </select>
+        </div>
 
-  <footer>
-    <p>© 2025 Angel - Guía de Git y GitHub</p>
-
-    <div class="accesibilidad">
-      <div class="filtro-daltonismo">
-        <label for="select-daltonismo">Filtro daltonismo:</label>
-        <select id="select-daltonismo" aria-label="Filtro para tipos de daltonismo">
-          <option value="ninguno">Ninguno</option>
-          <option value="protanopia">Protanopía</option>
-          <option value="deuteranopia">Deuteranopía</option>
-          <option value="tritanopia">Tritanopía</option>
-        </select>
+        <div class="botones-accesibilidad">
+          <button id="btn-aumentar">A+</button>
+          <button id="btn-disminuir">A-</button>
+          <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
+          <button id="btn-alto-contraste">🌓 Alto contraste</button>
+          <button id="btn-sin-imagenes">🚫 Imágenes</button>
+          <button id="btn-sin-links">🚫 Links</button>
+          <button id="btn-lectura">🔊 Leer</button>
+          <button id="btn-reiniciar">♻️ Reiniciar</button>
+        </div>
       </div>
+    </footer>
 
-      <div class="botones-accesibilidad">
-        <button id="btn-aumentar">A+</button>
-        <button id="btn-disminuir">A-</button>
-        <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
-        <button id="btn-alto-contraste">🌓 Alto contraste</button>
-        <button id="btn-sin-imagenes">🚫 Imágenes</button>
-        <button id="btn-sin-links">🚫 Links</button>
-        <button id="btn-lectura">🔊 Leer</button>
-        <button id="btn-reiniciar">♻️ Reiniciar</button>
+    <div id="modal-exito" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <p>¡Mensaje enviado con éxito! ✅</p>
+        <button onclick="cerrarModal()">Cerrar</button>
       </div>
     </div>
-  </footer>
 
-  <div id="modal-exito" class="modal" aria-hidden="true">
-  <div class="modal-content">
-    <p>¡Mensaje enviado con éxito! ✅</p>
-    <button onclick="cerrarModal()">Cerrar</button>
-  </div>
-</div>
-
-<script>
-  const captchaText = document.getElementById("captcha-text");
-  const captchaInput = document.getElementById("captcha-input");
-  const form = document.getElementById("form-contacto");
-  const modal = document.getElementById("modal-exito");
-
-  // Generar texto aleatorio
-  const textoCaptcha = Math.random().toString(36).substring(2, 8).toUpperCase();
-  captchaText.textContent = textoCaptcha;
-
-  // Prevenir envío si el captcha no coincide
-  form.addEventListener("submit", function (e) {
-    if (captchaInput.value.toUpperCase() !== textoCaptcha) {
-      e.preventDefault();
-      alert("Captcha incorrecto. Intenta de nuevo.");
-      return;
-    }
-
-    // Mostrar modal y evitar redirección
-    e.preventDefault();
-    modal.style.display = "block";
-    modal.setAttribute("aria-hidden", "false");
-
-    // Enviar datos manualmente a FormSubmit usando fetch
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json"
-      }
-    }).then(response => {
-      if (!response.ok) {
-        alert("Error al enviar el mensaje.");
-      }
-    }).catch(() => {
-      alert("No se pudo enviar. Revisa tu conexión.");
-    });
-  });
-
-  function cerrarModal() {
-    modal.style.display = "none";
-    modal.setAttribute("aria-hidden", "true");
-    form.reset();
-    location.reload(); // para regenerar el captcha
-  }
-</script>
-
-
-  <script src="js/accesibilidad.js"></script>
-</body>
+    <script src="js/modal.js"></script>
+    <script src="js/accesibilidad.js"></script>
+  </body>
 </html>

@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV Angel</title>
-  <link rel="stylesheet" href="css/estilos.css" />
-</head>
-<body>
-  <header>
-    <h1>Guía de Git y GitHub</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="integracion.html">Integración</a></li>
-        <li><a href="comandos.html">Comandos</a></li>
-        <li><a href="cv.html" aria-current="page">Mi CV</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="card cv-card">
-      <img src="img/foto.jpeg" alt="Foto de Ángel" class="img-foto-cv" />
-      <div class="card-content">
-        <h2>Angel Diaz</h2>
-        <p><strong>Profesión:</strong> Ingeniero de Software</p>
-        <p><strong>Experiencia:</strong> 3 años en desarrollo de Software.</p>
-        <h3>Educación</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Angel</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guía de Git y GitHub</h1>
+      <nav>
         <ul>
-          <li>Licenciatura en Ingeniería en Sistemas - Universidad XYZ</li>
-          <li>Curso de Accesibilidad Web - Plataforma ABC</li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="integracion.html">Integración</a></li>
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="cv.html" aria-current="page">Mi CV</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
-        <h3>Habilidades</h3>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Python, Kotlin, Django</li>
-          <li>Diseño responsivo</li>
-        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card cv-card">
+        <img src="img/foto.jpeg" alt="Foto de Ángel" class="img-foto-cv" />
+        <div class="card-content">
+          <h2>Angel Diaz</h2>
+          <p><strong>Profesión:</strong> Ingeniero de Software</p>
+          <p><strong>Experiencia:</strong> 3 años en desarrollo de Software.</p>
+          <h3>Educación</h3>
+          <ul>
+            <li>Ingeniero de Software - Universidad de Colima</li>
+            <li>Tecnico en Analista Programador - Universidad de Colima</li>
+          </ul>
+          <h3>Habilidades</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, Kotlin, Django</li>
+            <li>Diseño responsivo</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Angel - Guía de Git y GitHub</p>
+
+      <div class="accesibilidad">
+        <div class="filtro-daltonismo">
+          <label for="select-daltonismo">Filtro daltonismo:</label>
+          <select
+            id="select-daltonismo"
+            aria-label="Filtro para tipos de daltonismo"
+          >
+            <option value="ninguno">Ninguno</option>
+            <option value="protanopia">Protanopía</option>
+            <option value="deuteranopia">Deuteranopía</option>
+            <option value="tritanopia">Tritanopía</option>
+          </select>
+        </div>
+
+        <div class="botones-accesibilidad">
+          <button id="btn-aumentar">A+</button>
+          <button id="btn-disminuir">A-</button>
+          <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
+          <button id="btn-alto-contraste">🌓 Alto contraste</button>
+          <button id="btn-sin-imagenes">🚫 Imágenes</button>
+          <button id="btn-sin-links">🚫 Links</button>
+          <button id="btn-lectura">🔊 Leer</button>
+          <button id="btn-reiniciar">♻️ Reiniciar</button>
+        </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer>
-    <p>© 2025 Angel - Guía de Git y GitHub</p>
-
-    <div class="accesibilidad">
-      <div class="filtro-daltonismo">
-        <label for="select-daltonismo">Filtro daltonismo:</label>
-        <select id="select-daltonismo" aria-label="Filtro para tipos de daltonismo">
-          <option value="ninguno">Ninguno</option>
-          <option value="protanopia">Protanopía</option>
-          <option value="deuteranopia">Deuteranopía</option>
-          <option value="tritanopia">Tritanopía</option>
-        </select>
-      </div>
-
-      <div class="botones-accesibilidad">
-        <button id="btn-aumentar">A+</button>
-        <button id="btn-disminuir">A-</button>
-        <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
-        <button id="btn-alto-contraste">🌓 Alto contraste</button>
-        <button id="btn-sin-imagenes">🚫 Imágenes</button>
-        <button id="btn-sin-links">🚫 Links</button>
-        <button id="btn-lectura">🔊 Leer</button>
-        <button id="btn-reiniciar">♻️ Reiniciar</button>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/accesibilidad.js"></script>
-</body>
+    <script src="js/accesibilidad.js"></script>
+  </body>
 </html>

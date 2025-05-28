@@ -1,75 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Información: Integrar Git con GitHub</title>
-  <link rel="stylesheet" href="css/estilos.css" />
-</head>
-<body>
-  <header>
-    <h1>Guía de Git y GitHub</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="informacion.html" aria-current="page">Integración</a></li>
-        <li><a href="comandos.html">Comandos</a></li>
-        <li><a href="cv.html">Mi CV</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="card">
-      <div class="card-content">
-        <h2>Pasos para subir tu proyecto local de Git a GitHub</h2>
-        <p>
-          Para integrar un proyecto creado con Git en tu computadora a GitHub, debes seguir estos pasos básicos. Esto te permitirá mantener una copia remota de tu proyecto y colaborar con otros desarrolladores.
-        </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Información: Integrar Git con GitHub</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guía de Git y GitHub</h1>
+      <nav>
         <ul>
-          <li><strong>1. Crea un repositorio en GitHub:</strong> Ve a GitHub y haz clic en "New repository". Copia la URL del repositorio que se genera.</li>
-          <li><strong>2. Inicia Git en tu proyecto local:</strong> En la terminal, navega a la carpeta de tu proyecto y ejecuta: <code>git init</code></li>
-          <li><strong>3. Agrega los archivos al repositorio:</strong> Usa <code>git add .</code> para agregar todos los archivos.</li>
-          <li><strong>4. Realiza el primer commit:</strong> Ejecuta <code>git commit -m "Primer commit"</code></li>
-          <li><strong>5. Conecta con GitHub:</strong> Usa el comando <code>git remote add origin URL_DEL_REPOSITORIO</code></li>
-          <li><strong>6. Sube el proyecto:</strong> Ejecuta <code>git push -u origin main</code> (o <code>master</code> si ese es tu branch principal).</li>
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="informacion.html" aria-current="page">Integración</a>
+          </li>
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="cv.html">Mi CV</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
-      </div>
-      <div class="card-img">
-        <img src="img/diagramaDeFlujo.png" alt="Diagrama integración Git y GitHub" class="img-pobreza" />
-      </div>
-    </section>
-  </main>
+      </nav>
+    </header>
 
-  <footer>
-    <p>© 2025 Angel - Guía de Git y GitHub</p>
-    <div class="accesibilidad">
-      <div class="filtro-daltonismo">
-        <label for="select-daltonismo">Filtro daltonismo:</label>
-        <select id="select-daltonismo" aria-label="Filtro para tipos de daltonismo">
-          <option value="ninguno">Ninguno</option>
-          <option value="protanopia">Protanopía</option>
-          <option value="deuteranopia">Deuteranopía</option>
-          <option value="tritanopia">Tritanopía</option>
-        </select>
+    <main>
+      <section class="card">
+        <div class="card-content">
+          <h2>Pasos para subir tu proyecto local de Git a GitHub</h2>
+          <p>
+            Para integrar un proyecto creado con Git en tu computadora a GitHub,
+            debes seguir estos pasos básicos. Esto te permitirá mantener una
+            copia remota de tu proyecto y colaborar con otros desarrolladores.
+          </p>
+          <ul>
+            <li>
+              <strong>1. Crea un repositorio en GitHub:</strong> Ve a GitHub y
+              haz clic en "New repository". Copia la URL del repositorio que se
+              genera.
+            </li>
+            <li>
+              <strong>2. Inicia Git en tu proyecto local:</strong> En la
+              terminal, navega a la carpeta de tu proyecto y ejecuta:
+              <code>git init</code>
+            </li>
+            <li>
+              <strong>3. Agrega los archivos al repositorio:</strong> Usa
+              <code>git add .</code> para agregar todos los archivos.
+            </li>
+            <li>
+              <strong>4. Realiza el primer commit:</strong> Ejecuta
+              <code>git commit -m "Primer commit"</code>
+            </li>
+            <li>
+              <strong>5. Conecta con GitHub:</strong> Usa el comando
+              <code>git remote add origin URL_DEL_REPOSITORIO</code>
+            </li>
+            <li>
+              <strong>6. Sube el proyecto:</strong> Ejecuta
+              <code>git push -u origin main</code> (o <code>master</code> si ese
+              es tu branch principal).
+            </li>
+          </ul>
+        </div>
+        <div class="card-img">
+          <img
+            src="img/diagramaDeFlujo.png"
+            alt="Diagrama integración Git y GitHub"
+            class="img-pobreza"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Angel - Guía de Git y GitHub</p>
+      <div class="accesibilidad">
+        <div class="filtro-daltonismo">
+          <label for="select-daltonismo">Filtro daltonismo:</label>
+          <select
+            id="select-daltonismo"
+            aria-label="Filtro para tipos de daltonismo"
+          >
+            <option value="ninguno">Ninguno</option>
+            <option value="protanopia">Protanopía</option>
+            <option value="deuteranopia">Deuteranopía</option>
+            <option value="tritanopia">Tritanopía</option>
+          </select>
+        </div>
+
+        <div class="botones-accesibilidad">
+          <button id="btn-aumentar">A+</button>
+          <button id="btn-disminuir">A-</button>
+          <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
+          <button id="btn-alto-contraste">🌓 Alto contraste</button>
+          <button id="btn-sin-imagenes">🚫 Imágenes</button>
+          <button id="btn-sin-links">🚫 Links</button>
+          <button id="btn-lectura">🔊 Leer</button>
+          <button id="btn-reiniciar">♻️ Reiniciar</button>
+        </div>
       </div>
+    </footer>
 
-      <div class="botones-accesibilidad">
-        <button id="btn-aumentar">A+</button>
-        <button id="btn-disminuir">A-</button>
-        <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
-        <button id="btn-alto-contraste">🌓 Alto contraste</button>
-        <button id="btn-sin-imagenes">🚫 Imágenes</button>
-        <button id="btn-sin-links">🚫 Links</button>
-        <button id="btn-lectura">🔊 Leer</button>
-        <button id="btn-reiniciar">♻️ Reiniciar</button>
-      </div>
-    </div>
-
-    
-  </footer>
-
-  <script src="js/accesibilidad.js"></script>
-</body>
+    <script src="js/accesibilidad.js"></script>
+  </body>
 </html>
