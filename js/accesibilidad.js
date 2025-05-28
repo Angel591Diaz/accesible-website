@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnSinImagenes = document.getElementById("btn-sin-imagenes");
   const btnSinLinks = document.getElementById("btn-sin-links");
   const btnLectura = document.getElementById("btn-lectura");
+  const btnCambioFuente = document.getElementById("btn-cambio-fuente"); // nuevo botón
   const selectDaltonismo = document.getElementById("select-daltonismo");
   const btnReiniciar = document.getElementById("btn-reiniciar");
 
@@ -16,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let scaleFactor = 1;
   const maxScale = 3;
   const minScale = 0.3;
+
+  // Variable para cambio de fuente: true = fuente serif, false = sans-serif
+  let fuenteSerif = false;
 
   // Textos alternativos para botones toggle
   const textosToggle = {
@@ -35,10 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.fontSize = factor + "em";
   }
 
+  // Aplicar la fuente según el estado actual
+  function aplicarFuente() {
+    if (fuenteSerif) {
+      body.style.fontFamily = "Georgia, serif";
+    } else {
+      body.style.fontFamily = "Arial, sans-serif";
+    }
+  }
+
   // Guardar estado en localStorage
   function guardarEstado() {
     const estado = {
       scaleFactor,
+      fuenteSerif,
       modoOscuro: body.classList.contains("dark-mode"),
       altoContraste: body.classList.contains("high-contrast"),
       sinImagenes: body.classList.contains("no-images"),
@@ -60,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       actualizarTextoToggle(btnAltoContraste, false, textosToggle.altoContraste);
       actualizarTextoToggle(btnSinImagenes, false, textosToggle.sinImagenes);
       actualizarTextoToggle(btnSinLinks, false, textosToggle.sinLinks);
+      aplicarFuente();
       return;
     }
 
@@ -67,6 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
       scaleFactor = estado.scaleFactor;
       aplicarEscala(scaleFactor);
     }
+
+    fuenteSerif = estado.fuenteSerif || false;
+    aplicarFuente();
 
     if (estado.modoOscuro) body.classList.add("dark-mode");
     if (estado.altoContraste) body.classList.add("high-contrast");
@@ -106,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Listeners para botones normales
   btnAumentar.addEventListener("click", () => {
     if (scaleFactor < maxScale) {
-      scaleFactor += 0.3;
+      scaleFactor = Math.min(scaleFactor + 0.3, maxScale);
       aplicarEscala(scaleFactor);
       guardarEstado();
     }
@@ -114,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnDisminuir.addEventListener("click", () => {
     if (scaleFactor > minScale) {
-      scaleFactor -= 0.3;
+      scaleFactor = Math.max(scaleFactor - 0.3, minScale);
       aplicarEscala(scaleFactor);
       guardarEstado();
     }
@@ -153,6 +171,9 @@ document.addEventListener("DOMContentLoaded", () => {
     scaleFactor = 1;
     aplicarEscala(scaleFactor);
 
+    fuenteSerif = false;
+    aplicarFuente();
+
     body.classList.remove("dark-mode", "high-contrast", "no-images", "no-links",
       "daltonismo-protanopia", "daltonismo-deuteranopia", "daltonismo-tritanopia");
 
@@ -178,6 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
       btnLectura.classList.remove("activo"); // audio activo, fondo desactivado
       btnLectura.textContent = "⏹️ Detener";
     }
+    guardarEstado();
+  });
+
+  // Listener para botón cambio de fuente
+  btnCambioFuente.addEventListener("click", () => {
+    fuenteSerif = !fuenteSerif;
+    aplicarFuente();
     guardarEstado();
   });
 
